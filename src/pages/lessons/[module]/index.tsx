@@ -7,7 +7,11 @@ import { codeToEngLang, natLangToCode } from "@/utils/lang";
 
 const moduleList = ["directions", "restaurant", "clothing", "weather", "time", "sports", "hobbies", "hackathons"];
 
-export default function Page({ json }) {
+type Props = {
+  json: any;
+};
+
+export default function Page({ json }: Props) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
