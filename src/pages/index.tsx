@@ -78,7 +78,6 @@ export default function Home() {
     while(newPrompt === prompt){
       newPrompt = lessons[Math.floor(Math.random() * lessons.length)]["setting"];
     }
-    console.log("PROMPT SET", newPrompt);
     setPrompt(newPrompt);
   };
 
@@ -108,12 +107,6 @@ export default function Home() {
 
               <span className="text-gray-300 font-serif">to practice</span>
 
-              <DropdownMenu
-                name={"difficulty"}
-                options={difficulties}
-                value={difficulty}
-                onSelect={setDifficulty}
-              />
               <DropdownMenu
                 name={"language"}
                 options={languages}
