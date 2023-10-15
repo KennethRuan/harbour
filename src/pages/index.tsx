@@ -74,11 +74,11 @@ export default function Home() {
 
 
   const regenHandle = () => {
-    console.log("WOO")
     let newPrompt = lessons[Math.floor(Math.random() * lessons.length)]["setting"];
     while(newPrompt === prompt){
       newPrompt = lessons[Math.floor(Math.random() * lessons.length)]["setting"];
     }
+    console.log("PROMPT SET", newPrompt);
     setPrompt(newPrompt);
   };
 
