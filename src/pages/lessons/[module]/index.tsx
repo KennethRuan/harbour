@@ -20,7 +20,7 @@ export default function Page({ json }: Props) {
 
   const moduleName = router.query.module as string;
 
-  console.log("MOD", moduleName);
+  // console.log("MOD", moduleName);
 
   const getBody = () => {
     return {
@@ -63,11 +63,11 @@ export default function Page({ json }: Props) {
 export async function getServerSideProps(context: any) {
   const { module } = context.query;
 
-  console.log("Getting props", module)
+  // console.log("Getting props", module)
 
   const { readFileSync } = require("fs");
   var path = require("path");
-  const fileDirectory = `./public/data/${module}.json`;
+  const fileDirectory = path.join(process.cwd(),"public","data",`${module}.json`);
   const data = JSON.parse(readFileSync(
     fileDirectory,
     'utf8'
