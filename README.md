@@ -22,8 +22,6 @@ Finally, run the following snippet to spin up the site on your local machine:
 # npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to try it out!
-
 ---
 
 ## Preview
