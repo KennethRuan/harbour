@@ -30,10 +30,15 @@ export default function Page({ json }: Props) {
   };
   // console.log("MODULE NAME", moduleName);
 
-  const { messages, input, handleInputChange, setInput, handleSubmit, isLoading, append } = useChat({
+  const { messages, input, handleInputChange, setInput, handleSubmit, isLoading, error, append } = useChat({
     api: '/api/openai/generate',
     body: getBody(),
   });
+
+  if (error) {
+    console.error(error);
+    return <div>Sorry, something went wrong.</div>;
+  }
 
 
   if (!moduleList.includes(moduleName)) {
