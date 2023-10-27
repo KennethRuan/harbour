@@ -37,7 +37,6 @@ export default function Page({ json }: Props) {
 
   if (error) {
     console.error(error);
-    return <div>Sorry, something went wrong.</div>;
   }
 
 

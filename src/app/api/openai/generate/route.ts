@@ -100,7 +100,7 @@ export async function POST(req: NextRequest) {
     const messages = body.messages ?? [] as VercelChatMessage[];
     const { moduleName, langCode } = body;
 
-    console.log("I GOT THIS CODE", langCode);
+    // console.log("I GOT THIS CODE", langCode);
 
     const language = codeToEngLang.get(langCode) || 'English';
 
