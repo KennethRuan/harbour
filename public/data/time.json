@@ -1,7 +1,7 @@
 {
     "module": "time",
     "setting": "airport",
-    "scenario": "You are at the airport, waiting for a flight",
+    "scenario": "You are at the airport, waiting for a flight. You bump into a traveller named Léa and hope to get some help. Start by greeting them and introducing yourself.",
     "objectives": [
       {
         "objective": "Determine the departure time of Léa's flight",
