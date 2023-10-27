@@ -70,5 +70,5 @@ export async function POST(req: Request) {
   })
  
   // Respond with the stream
-  return new StreamingTextResponse(stream)
+  return new StreamingTextResponse(stream, {headers: { 'Content-Type': 'text/plain' }})
 }
